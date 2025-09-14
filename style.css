@@ -741,97 +741,152 @@ footer {
 /* Nuevos estilos para la sección de contacto */
 .contact-section {
     text-align: center;
-    padding: 3rem !important;
+    padding: 4rem 1rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 }
 
-.contact-header {
-    margin-bottom: 3rem;
-    animation: fadeInUp 1s ease-out;
+.contact-main-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-.contact-header h4 {
-    font-size: 2.2rem;
+.header-content {
+    max-width: 800px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.header-content h4 {
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.3;
 }
 
 .contact-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-color);
     opacity: 0.9;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.contact-info-row {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
     gap: 2rem;
-    margin: 2rem 0;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin: 1rem 0;
 }
 
-.contact-card {
+.contact-info-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(77, 182, 172, 0.05) 100%);
     border-radius: 15px;
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 1s ease-out;
+    transition: transform 0.3s ease;
 }
 
-.contact-card:hover {
+.contact-info-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(77, 182, 172, 0.1) 100%);
 }
 
-.card-icon {
-    margin-bottom: 1.5rem;
-}
-
-.card-icon i {
-    color: var(--primary-color);
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.card-content h5 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.contact-link {
-    display: inline-flex;
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.info-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contact-info-item h5 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.contact-info-item a,
+.contact-info-item p {
     color: var(--text-color);
     text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-break: break-word;
 }
 
-.contact-link:hover {
+.contact-info-item a:hover {
     color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateX(5px);
 }
 
-.contact-message {
+.contact-footer {
+    width: 100%;
+    max-width: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 3rem;
     padding: 1.5rem;
+    margin-top: 1rem;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(77, 182, 172, 0.02) 100%);
     border-radius: 15px;
     animation: fadeIn 1.5s ease-out;
 }
 
-.contact-message i {
+.contact-footer i {
     color: #ff6b6b;
     font-size: 1.5rem;
     animation: pulse 2s infinite;
+}
+
+.contact-footer p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem 1rem !important;
+        gap: 2rem;
+    }
+
+    .header-content h4 {
+        font-size: 2rem;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .contact-info-row {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .contact-info-item {
+        min-width: 100%;
+        padding: 1.25rem;
+    }
 }
 
 .pulse {
