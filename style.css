@@ -375,6 +375,76 @@ footer {
     }
 }
 
+/* Activities Table Styles */
+.activities-table {
+    margin-top: 2rem;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    background: var(--card-bg);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.activities-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+}
+
+.activities-table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.activities-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+}
+
+.table-row {
+    transition: all 0.3s ease;
+}
+
+.table-row:hover {
+    background-color: rgba(0, 121, 107, 0.05);
+    transform: translateX(5px);
+}
+
+.activities-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.activities-table h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive table */
+@media (max-width: 1200px) {
+    .table-responsive {
+        padding: 0.5rem;
+    }
+
+    .activities-table td, .activities-table th {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
